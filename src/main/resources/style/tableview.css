@@ -1,0 +1,17 @@
+.table-view .table-column {
+    -fx-background-color: #064469; /* Cambia el color de fondo de todas las columnas */
+    -fx-font-size: 16px;
+}
+.table-view .table-column .label {
+    -fx-text-fill: #FFFFFF; /* Código hexadecimal para el color blanco */
+}
+
+/* Estilo para todas las celdas de todas las columnas */
+.table-view .table-cell {
+      -fx-font-size: 20px; /* Cambia el tamaño del texto en todas las celdas */
+      -fx-background-color: white;
+}
+
+.table-row-cell:selected .table-cell {
+    -fx-background-color: #9CCDDB; /* Cambia el color de fondo de las celdas seleccionadas */
+}

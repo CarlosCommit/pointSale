@@ -1,0 +1,4 @@
+.button:focused {
+    -fx-background-color: #FFB32F !important; /* Cambia el color de fondo del botón */
+    -fx-text-fill: white; /* Cambia el color del texto del botón */
+}

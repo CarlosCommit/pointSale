@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.point.sale.controller.ProductController">
+   <left>
+      <VBox alignment="TOP_CENTER" prefHeight="720.0" prefWidth="345.0" spacing="50.0" style="-fx-background-color: #072D44;" BorderPane.alignment="TOP_CENTER">
+         <children>
+            <ImageView fitHeight="61.0" fitWidth="245.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/logoPos.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="50.0" top="50.0" />
+               </VBox.margin>
+            </ImageView>
+            <Button alignment="TOP_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#cambiarFacturacion" prefHeight="56.0" prefWidth="347.0" style="-fx-background-color: 072D44;" text="Facturacion" textFill="#eaf0f8">
+               <font>
+                  <Font name="Arial Bold" size="27.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icon-facturacion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="TOP_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#cambiarProductos" prefHeight="56.0" prefWidth="347.0" style="-fx-background-color: 072D44;" text="Productos" textFill="#eaf0f8">
+               <font>
+                  <Font name="Arial Bold" size="27.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icon-productos.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="TOP_LEFT" graphicTextGap="15.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="347.0" style="-fx-background-color: 072D44;" text="Ventas" textFill="#eaf0f8">
+               <font>
+                  <Font name="Arial Bold" size="27.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icon-ventas.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="30.0" />
+         </padding></VBox>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox layoutX="203.0" layoutY="46.0" prefHeight="502.0" prefWidth="536.0" AnchorPane.leftAnchor="203.0" AnchorPane.rightAnchor="196.0">
+               <children>
+                  <VBox prefHeight="621.0" prefWidth="327.0" spacing="40.0">
+                     <children>
+                        <AnchorPane prefHeight="42.0" prefWidth="231.0">
+                           <children>
+                              <Label layoutX="88.0" layoutY="20.0" text="Ingrese el codigo de barra " AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="42.0" prefWidth="231.0">
+                           <children>
+                              <Label layoutX="88.0" layoutY="20.0" text="Descripcion del Producto" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="42.0" prefWidth="231.0">
+                           <children>
+                              <Label layoutX="88.0" layoutY="20.0" text="Precio a la Venta $" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="42.0" prefWidth="231.0">
+                           <children>
+                              <Label layoutX="88.0" layoutY="20.0" text="Precio Mayorista $" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="621.0" prefWidth="417.0" spacing="50.0">
+                     <children>
+                        <TextField fx:id="codebar" onAction="#handleFirsEnterCodeBar" prefHeight="31.0" prefWidth="305.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font></TextField>
+                        <TextField fx:id="nombre" prefHeight="31.0" prefWidth="337.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font></TextField>
+                        <TextField fx:id="precio" prefHeight="31.0" prefWidth="305.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font></TextField>
+                        <TextField fx:id="precioMayorista" prefHeight="31.0" prefWidth="305.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font></TextField>
+                        <HBox prefHeight="54.0" prefWidth="313.0" spacing="30.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#cambiarProductos" prefHeight="48.0" prefWidth="194.0" style="-fx-background-color: #064469;" stylesheets="@../style/botones.css" text="SALIR" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="17.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="guardar" mnemonicParsing="false" onAction="#guardarProducto" prefHeight="48.0" prefWidth="188.0" style="-fx-background-color: #064469;" stylesheets="@../style/botones.css" text="GUARDAR" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="17.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox fx:id="msgUsuario" alignment="CENTER_RIGHT" layoutX="14.0" layoutY="673.0" prefHeight="61.0" prefWidth="935.0" visible="false" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+               <children>
+                  <Label fx:id="descUsuario" prefHeight="61.0" prefWidth="418.0" text="Mensaje de Usuario">
+                     <font>
+                        <Font name="System Italic" size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgMsgUsuario" fitHeight="52.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
